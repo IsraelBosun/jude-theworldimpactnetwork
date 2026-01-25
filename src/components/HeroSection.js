@@ -40,43 +40,41 @@ export default function HeroSection() {
       <div className="container mx-auto px-6 relative z-10">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
           
-          {/* Left Side: Main Brand & Headline */}
-          <div className="max-w-4xl text-left">
-            <p className="text-gold font-bold tracking-[0.4em] mb-4 uppercase text-xs md:text-sm">
-              {eventData.name}
-            </p>
-            
-            <div className="relative inline-block mb-4">
-              <h1 className="text-7xl md:text-[10rem] font-black tracking-tighter leading-none italic uppercase">
-                {eventData.theme.main}
-              </h1>
-              {/* Gold Accent Line */}
-              <div className="h-2 w-1/2 bg-gold mt-2"></div>
-            </div>
-            
-            <h2 className="text-3xl md:text-5xl font-light tracking-[0.2em] text-white/90 uppercase mt-2">
-              {eventData.theme.sub}
-            </h2>
-            
-            <p className="text-gray-400 mt-8 text-lg md:text-xl max-w-xl font-medium leading-relaxed">
-              {eventData.heroSubheading}
-            </p>
+<div className="max-w-4xl text-left px-4 sm:px-6 md:px-8 lg:px-0">
+  <p className="text-gold font-bold tracking-[0.4em] mb-4 mt-4 uppercase text-xs md:text-sm">
+    {eventData.name}
+  </p>
 
-            {/* Integrated Timer */}
-            <div className="flex gap-10 mt-12 mb-12">
-              <TimerUnit value={timeLeft.days} label="Days" />
-              <TimerUnit value={timeLeft.hours} label="Hours" />
-              <TimerUnit value={timeLeft.mins} label="Minutes" />
-              <TimerUnit value={timeLeft.secs} label="Seconds" />
-            </div>
+  <div className="relative inline-block mb-4 max-w-full overflow-hidden">
+    <h1 className="text-5xl sm:text-6xl md:text-[10rem] font-black tracking-tighter leading-none italic uppercase">
+      {eventData.theme.main}
+    </h1>
+    <div className="h-2 w-1/2 bg-gold mt-2"></div>
+  </div>
 
-            <div className="flex flex-wrap gap-5">
-              <button className="btn-primary px-12">Register Now</button>
-              <button className="bg-white/5 border border-white/20 px-12 py-4 rounded-full font-bold hover:bg-white/10 transition-all backdrop-blur-md uppercase tracking-wider text-sm">
-                Attend Online
-              </button>
-            </div>
-          </div>
+  <h2 className="text-3xl md:text-5xl font-light tracking-[0.2em] text-white/90 uppercase mt-2">
+    {eventData.theme.sub}
+  </h2>
+
+  <p className="text-gray-400 mt-8 text-lg md:text-xl max-w-xl font-medium leading-relaxed">
+    {eventData.heroSubheading}
+  </p>
+
+  <div className="flex gap-6 sm:gap-10 mt-12 mb-12 flex-wrap">
+    <TimerUnit value={timeLeft.days} label="Days" />
+    <TimerUnit value={timeLeft.hours} label="Hours" />
+    <TimerUnit value={timeLeft.mins} label="Minutes" />
+    <TimerUnit value={timeLeft.secs} label="Seconds" />
+  </div>
+
+  <div className="flex flex-wrap gap-5">
+    <button className="btn-primary px-12">Register Now</button>
+    <button className="bg-white/5 border border-white/20 px-12 py-4 rounded-full font-bold hover:bg-white/10 transition-all backdrop-blur-md uppercase tracking-wider text-sm">
+      Attend Online
+    </button>
+  </div>
+</div>
+
 
           {/* Right Side: Glassmorphism Info Card */}
           <div className="lg:w-[400px] w-full mt-12 lg:mt-0">
