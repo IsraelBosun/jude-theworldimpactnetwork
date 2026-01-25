@@ -32,6 +32,40 @@
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { eventData } from "@/lib/data";
+
+export const metadata = {
+  title: {
+    default: `${eventData.name} | ${eventData.theme.main}`,
+    template: `%s | ${eventData.name}`,
+  },
+  description: eventData.heroSubheading,
+  keywords: ["Marketplace Ministers", "TMMF", "TWIN Global", "Kingdom Leaders", "Lagos Conference 2026"],
+  authors: [{ name: "Jude Oni" }],
+  creator: "Bluehydra",
+  openGraph: {
+    title: eventData.name,
+    description: eventData.theme.sub,
+    url: "https://theworldimpactnetwork.vercel.app/", // Replace with your actual domain
+    siteName: "TMMF",
+    images: [
+      {
+        url: "/hero.png", // This will show up as the preview image on WhatsApp/LinkedIn
+        width: 1200,
+        height: 630,
+        alt: eventData.theme.main,
+      },
+    ],
+    locale: "en_NG",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: eventData.name,
+    description: eventData.theme.sub,
+    images: ["/hero.png"],
+  },
+};
 
 export default function RootLayout({ children }) {
   return (
