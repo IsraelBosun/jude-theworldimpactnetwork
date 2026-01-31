@@ -15,7 +15,7 @@ export const eventData = {
   contact: {
     phone: "+234 814 344 2367",
     phone2: "+234 906 504 9121",
-    email: "thewoldimpactnetwork@gmail.com"
+    email: "thewordimpactnetwork@gmail.com"
   }
 };
 
@@ -24,7 +24,7 @@ export const navLinks = [
   { name: "Audience", href: "#audience" },
   { name: "Outcomes", href: "#outcomes" },
   { name: "Speakers", href: "#speakers" },
-  { name: "Partners", href: "/partners" },
+  { name: "Partnership", href: "/partnership" },
   { name: "Volunteer", href: "/volunteer" }
 ];
 

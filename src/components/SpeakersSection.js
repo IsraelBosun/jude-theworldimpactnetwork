@@ -1,5 +1,5 @@
 export default function SpeakersSection() {
-  const placeholders = [1, 2, 3, 4];
+  const placeholders = [1, 2, 3];
 
   return (
     <section id="speakers" className="section-padding bg-white">
@@ -16,7 +16,7 @@ export default function SpeakersSection() {
           </div>
         </div>
 
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-2 lg:grid-cols-3 gap-8">
           {placeholders.map((i) => (
             <div key={i} className="space-y-4">
               <div className="aspect-[4/5] bg-gray-200 rounded-3xl overflow-hidden relative group">

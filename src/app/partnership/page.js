@@ -222,9 +222,17 @@ export default function SponsorshipPage() {
                     {eventData.contact.phone2}
                   </a>
                 </div>
-                <button className="w-full bg-black text-white py-4 rounded-xl font-black uppercase tracking-widest text-xs mt-8 active:scale-95 transition-transform">
-                  Inquire Now
-                </button>
+                    <a
+                      href="https://tally.so/r/kdE6vJ"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block"
+                    >
+                      <button className="w-full bg-black cursor-pointer text-white py-4 rounded-xl font-black uppercase tracking-widest text-xs mt-8 active:scale-95 transition-transform">
+                        Partner Now
+                      </button>
+                    </a>
+
               </div>
 
             </div>
