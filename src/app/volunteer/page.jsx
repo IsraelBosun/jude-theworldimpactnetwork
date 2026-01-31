@@ -20,11 +20,11 @@ export default function VolunteerPage() {
               SERVE WITH <br />
               <span className="text-gold italic">PURPOSE</span>
             </h1>
-            <p className="text-gray-300 lg:text-gray-600 text-lg mb-8 leading-relaxed max-w-lg">
+            <p className="text-black lg:text-black text-lg mb-8 leading-relaxed max-w-lg">
                 The Marketplace Ministers’ Forum is seeking committed individuals who are eager to contribute their skills, time, and passion toward delivering a world-class conference experience.
             </p>
             
-            <div className="space-y-6 mb-12">
+            <div className="space-y-6 text-black mb-12">
               {[
                 "Experience excellence in event coordination",
                 "Network with marketplace leaders",
@@ -34,7 +34,7 @@ export default function VolunteerPage() {
                   <div className="w-6 h-6 rounded-full bg-gold/20 flex items-center justify-center text-gold font-bold text-xs">
                     ✓
                   </div>
-                  <span className="font-medium text-gray-400 lg:text-gray-700">{benefit}</span>
+                  <span className="font-medium text-black">{benefit}</span>
                 </div>
               ))}
             </div>

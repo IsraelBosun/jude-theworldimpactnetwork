@@ -74,17 +74,25 @@ export default function Footer() {
           <div>
             <h4 className="text-gold font-bold uppercase tracking-[0.2em] text-[10px] mb-8">Inquiries</h4>
             <div className="space-y-6">
+              {/* Email Section */}
               <div>
                 <p className="text-white text-xs font-bold uppercase tracking-widest mb-2 opacity-50">Email Us</p>
                 <a href={`mailto:${eventData.contact.email}`} className="text-gray-300 hover:text-gold transition-colors block text-sm">
                   {eventData.contact.email}
                 </a>
               </div>
+
+              {/* Phone Section */}
               <div>
                 <p className="text-white text-xs font-bold uppercase tracking-widest mb-2 opacity-50">Call Us</p>
-                <a href={`tel:${eventData.contact.phone}`} className="text-gray-300 hover:text-gold transition-colors block text-sm">
-                  {eventData.contact.phone}
-                </a>
+                <div className="space-y-2"> {/* Added a small gap between the two numbers */}
+                  <a href={`tel:${eventData.contact.phone}`} className="text-gray-300 hover:text-gold transition-colors block text-sm">
+                    {eventData.contact.phone}
+                  </a>
+                  <a href={`tel:${eventData.contact.phone2}`} className="text-gray-300 hover:text-gold transition-colors block text-sm">
+                    {eventData.contact.phone2}
+                  </a>
+                </div>
               </div>
             </div>
           </div>

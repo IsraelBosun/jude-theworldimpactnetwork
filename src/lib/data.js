@@ -13,8 +13,9 @@ export const eventData = {
   attendanceMode: "Hybrid Event (Physical & Online)",
   physicalLimit: 70,
   contact: {
-    phone: "+234 807 462 4639",
-    email: "theworldimpactnetwork@gmail.com"
+    phone: "+234 814 344 2367",
+    phone2: "+234 906 504 9121",
+    email: "thewoldimpactnetwork@gmail.com"
   }
 };
 
