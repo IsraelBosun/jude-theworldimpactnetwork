@@ -24,13 +24,19 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 } */
+/* #D4AF37
+#0A0A0A */
+
+
+/* #Fffab6 */
+/* #173574 */
 
 
 @import "tailwindcss";
 
 @theme {
   --color-gold: #D4AF37;
-  --color-dark: #0A0A0A;
+  --color-dark: #173574;
   --color-muted: #1F1F1F;
   --font-sans: 'Inter', system-ui, sans-serif;
 }
