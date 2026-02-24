@@ -16,7 +16,8 @@ export const eventData = {
     phone: "+234 814 344 2367",
     phone2: "+234 906 504 9121",
     email: "thewordimpactnetwork@gmail.com"
-  }
+  },
+  registrationUrl: "https://tally.so/r/RG0E4d"
 };
 
 export const navLinks = [

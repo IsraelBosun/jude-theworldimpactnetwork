@@ -2,7 +2,7 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { navLinks } from '@/lib/data';
+import { navLinks, eventData } from '@/lib/data';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -55,12 +55,14 @@ export default function Navbar() {
 
         {/* Action Button & Toggle */}
         <div className="flex items-center gap-4 z-[110]">
-          <Link 
-            href={getHref("#register")} 
+          <a
+            href={eventData.registrationUrl}
+            target="_blank"
+            rel="noopener noreferrer"
             className="hidden sm:block bg-gold text-black px-6 py-2 rounded-full text-[10px] font-black uppercase tracking-widest hover:brightness-110 transition-all"
           >
             Register
-          </Link>
+          </a>
 
           {/* Hamburger Menu */}
           <button 
@@ -101,13 +103,15 @@ export default function Navbar() {
           
           <div className="h-px w-full bg-white/10 my-6" />
           
-          <Link 
-            href={getHref("#register")} 
+          <a
+            href={eventData.registrationUrl}
+            target="_blank"
+            rel="noopener noreferrer"
             onClick={() => setIsOpen(false)}
             className="bg-gold text-black text-center py-5 rounded-2xl font-black uppercase tracking-widest text-sm shadow-xl shadow-gold/10"
           >
             Register
-          </Link>
+          </a>
           
           <div className="mt-8 text-gray-500 text-xs tracking-widest uppercase">
             {new Date().getFullYear()} TWIN GLOBAL PROUDLY PRESENTS

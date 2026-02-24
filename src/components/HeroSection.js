@@ -68,10 +68,7 @@ export default function HeroSection() {
   </div>
 
   <div className="flex flex-wrap gap-5">
-    <button className="btn-primary px-12">Register Now</button>
-    <button className="bg-white/5 border border-white/20 px-12 py-4 rounded-full font-bold hover:bg-white/10 transition-all backdrop-blur-md uppercase tracking-wider text-sm">
-      Attend Online
-    </button>
+    <a href={eventData.registrationUrl} target="_blank" rel="noopener noreferrer" className="btn-primary px-16 py-5 text-lg shadow-lg shadow-gold/30 hover:scale-105 transition-transform">Register Now</a>
   </div>
 </div>
 

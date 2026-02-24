@@ -25,7 +25,7 @@ export default function RegistrationSection() {
               <li className="flex gap-3">✅ Event Materials & Catering</li>
               <li className="flex gap-3">✅ Strategic Prophetic Impartation</li>
             </ul>
-            <button className="w-full btn-primary">Register for Physical</button>
+            <a href={eventData.registrationUrl} target="_blank" rel="noopener noreferrer" className="w-full btn-primary text-center block">Register</a>
           </div>
 
           {/* Online Attendance */}
@@ -38,9 +38,7 @@ export default function RegistrationSection() {
               <li className="flex gap-3">✅ Virtual Q&A Sessions</li>
               <li className="flex gap-3">✅ Join from any time zone</li>
             </ul>
-            <button className="w-full border-2 border-white/20 hover:border-white py-4 rounded-full font-bold transition-all">
-              Attend Online
-            </button>
+            <a href={eventData.registrationUrl} target="_blank" rel="noopener noreferrer" className="w-full border-2 border-white/20 hover:border-white py-4 rounded-full font-bold transition-all text-center block">Register</a>
           </div>
         </div>
       </div>
