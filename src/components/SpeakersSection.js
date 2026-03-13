@@ -1,5 +1,25 @@
 export default function SpeakersSection() {
-  const placeholders = [1, 2, 3];
+  const speakers = [
+    {
+      name: "Bode Roberts",
+      role: "CEO, Dataleum",
+      image: "/dataleum.jpeg",
+      imagePosition: "object-center",
+      imageStyle: { objectPosition: "50% 20%" },
+    },
+    {
+      name: "Jude Oni",
+      role: "Convener",
+      image: "/jude.jpeg",
+      imagePosition: "object-center",
+    },
+    {
+      name: "Elekwachi Ifeanyichukwu",
+      role: "CEO, Sparks & Splendour",
+      image: "/splendor.jpeg",
+      imagePosition: "object-center",
+    },
+  ];
 
   return (
     <section id="speakers" className="section-padding bg-white">
@@ -11,33 +31,27 @@ export default function SpeakersSection() {
               TMMF will host seasoned industry leaders, marketplace ministers, and transformational voices with proven impact.
             </p>
           </div>
-          <div className="bg-gray-100 px-6 py-2 rounded-full text-sm font-bold tracking-widest uppercase">
-            Announcing Soon
-          </div>
         </div>
 
         <div className="grid grid-cols-2 lg:grid-cols-3 gap-8">
-          {placeholders.map((i) => (
-            <div key={i} className="space-y-4">
+          {speakers.map((speaker) => (
+            <div key={speaker.name} className="space-y-4">
               <div className="aspect-[4/5] bg-gray-200 rounded-3xl overflow-hidden relative group">
-                <img 
-                  src="https://placehold.co/600x800/1a1a1a/D4AF37?text=?" 
-                  alt="Speaker Placeholder" 
-                  className="w-full h-full object-cover grayscale opacity-80 group-hover:scale-105 transition-transform duration-700"
+                <img
+                  src={speaker.image}
+                  alt={speaker.name}
+                  className={`w-full h-full object-cover ${speaker.imagePosition} group-hover:scale-105 transition-transform duration-700`}
+                  style={speaker.imageStyle || {}}
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-dark/80 to-transparent"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-dark/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               </div>
               <div className="text-center">
-                <h4 className="font-bold text-lg">Industry Leader</h4>
-                <p className="text-gold text-xs uppercase tracking-widest font-semibold">TBA</p>
+                <h4 className="font-bold text-lg">{speaker.name}</h4>
+                <p className="text-gold text-xs uppercase tracking-widest font-semibold">{speaker.role}</p>
               </div>
             </div>
           ))}
         </div>
-        
-        <p className="text-center mt-12 text-gray-400 text-sm italic">
-          Expect influential voices shaping faith, leadership, and excellence.
-        </p>
       </div>
     </section>
   );
