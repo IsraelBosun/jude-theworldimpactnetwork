@@ -33,7 +33,7 @@ export default function SpeakersSection() {
           </div>
         </div>
 
-        <div className="grid grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {speakers.map((speaker) => (
             <div key={speaker.name} className="space-y-4">
               <div className="aspect-[4/5] bg-gray-200 rounded-3xl overflow-hidden relative group">
@@ -43,7 +43,7 @@ export default function SpeakersSection() {
                   className={`w-full h-full object-cover ${speaker.imagePosition} group-hover:scale-105 transition-transform duration-700`}
                   style={speaker.imageStyle || {}}
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-dark/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-dark/80 to-transparent opacity-0 group-hover:opacity-100 group-active:opacity-100 transition-opacity duration-500"></div>
               </div>
               <div className="text-center">
                 <h4 className="font-bold text-lg">{speaker.name}</h4>
