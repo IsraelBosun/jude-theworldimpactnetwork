@@ -1,4 +1,9 @@
+"use client";
+import { useState } from "react";
+
 export default function SpeakersSection() {
+  const [activeIndex, setActiveIndex] = useState(null);
+
   const speakers = [
     {
       name: "Bode Roberts",
@@ -21,6 +26,10 @@ export default function SpeakersSection() {
     },
   ];
 
+  const handleTap = (index) => {
+    setActiveIndex(activeIndex === index ? null : index);
+  };
+
   return (
     <section id="speakers" className="section-padding bg-white">
       <div className="container mx-auto">
@@ -34,23 +43,30 @@ export default function SpeakersSection() {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          {speakers.map((speaker) => (
-            <div key={speaker.name} className="space-y-4">
-              <div className="aspect-[4/5] bg-gray-200 rounded-3xl overflow-hidden relative group">
-                <img
-                  src={speaker.image}
-                  alt={speaker.name}
-                  className={`w-full h-full object-cover ${speaker.imagePosition} group-hover:scale-105 transition-transform duration-700`}
-                  style={speaker.imageStyle || {}}
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-dark/80 to-transparent opacity-0 group-hover:opacity-100 group-active:opacity-100 transition-opacity duration-500"></div>
+          {speakers.map((speaker, index) => {
+            const isActive = activeIndex === index;
+            return (
+              <div
+                key={speaker.name}
+                className="space-y-4 cursor-pointer"
+                onClick={() => handleTap(index)}
+              >
+                <div className="aspect-[4/5] bg-gray-200 rounded-3xl overflow-hidden relative group">
+                  <img
+                    src={speaker.image}
+                    alt={speaker.name}
+                    className={`w-full h-full object-cover ${speaker.imagePosition} transition-transform duration-700 ${isActive ? "scale-110" : "scale-100 group-hover:scale-105"}`}
+                    style={speaker.imageStyle || {}}
+                  />
+                  <div className={`absolute inset-0 bg-gradient-to-t from-dark/80 to-transparent transition-opacity duration-500 ${isActive ? "opacity-100" : "opacity-0 group-hover:opacity-100"}`}></div>
+                </div>
+                <div className="text-center">
+                  <h4 className="font-bold text-lg">{speaker.name}</h4>
+                  <p className="text-gold text-xs uppercase tracking-widest font-semibold">{speaker.role}</p>
+                </div>
               </div>
-              <div className="text-center">
-                <h4 className="font-bold text-lg">{speaker.name}</h4>
-                <p className="text-gold text-xs uppercase tracking-widest font-semibold">{speaker.role}</p>
-              </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>
