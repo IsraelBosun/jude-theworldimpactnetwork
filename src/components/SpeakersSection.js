@@ -13,7 +13,7 @@ export default function SpeakersSection() {
       imageStyle: { objectPosition: "50% 20%" },
       bio: {
         tagline: "Tech Leader · Entrepreneur · Digital Inclusion Advocate",
-        body: "CEO of Dataleum, promoting digital literacy across Nigeria & the UK.\n\nAwards: Edutech Startup of the Year (2021), Best EdTech Startup in Africa (2023), Most Outstanding CEO of the Year (2025), Future Awards Africa Prize (2025).\n\nFounded the Bode Roberts Endowment Fund & BR Global Consults. Appointed to the UN/UNDP Young Africa Innovates Programme.\n\nHolds PMP®, CBAP®, CAIC™, GPHR certifications. Currently pursuing a PhD in Business Administration.",
+        body: "CEO of Dataleum — promoting digital literacy across Nigeria & the UK.\n\nAwards include Best EdTech Startup in Africa (2023), Most Outstanding CEO (2025), and Future Awards Africa Prize (2025).\n\nFounded the Bode Roberts Endowment Fund & BR Global Consults. Appointed to the UN/UNDP Young Africa Innovates Programme.\n\nHolds PMP®, CBAP®, CAIC™ & GPHR certifications.",
       },
     },
     {
@@ -60,7 +60,7 @@ export default function SpeakersSection() {
           </div>
         </div>
 
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 items-start">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 items-start">
           {speakers.map((speaker, index) => {
             const isActive = activeIndex === index;
             const hasBio = !!speaker.bio;
@@ -120,9 +120,9 @@ export default function SpeakersSection() {
                       }}
                     >
                       <div className="aspect-[4/5] bg-dark rounded-3xl overflow-hidden flex flex-col p-4 lg:p-5">
-                        <p className="text-gold text-[9px] lg:text-[10px] uppercase tracking-widest font-bold mb-2 shrink-0">{speaker.bio.tagline}</p>
-                        <p className="text-gray-300 text-[10px] lg:text-xs leading-relaxed whitespace-pre-line overflow-y-auto flex-1 pr-1">{speaker.bio.body}</p>
-                        <p className="text-white/30 text-[9px] uppercase tracking-widest mt-2 shrink-0 text-center">Tap to close</p>
+                        <p className="text-gold text-xs lg:text-[10px] uppercase tracking-widest font-bold mb-3 shrink-0">{speaker.bio.tagline}</p>
+                        <p className="text-gray-300 text-sm lg:text-xs leading-relaxed whitespace-pre-line flex-1">{speaker.bio.body}</p>
+                        <p className="text-white/30 text-xs uppercase tracking-widest mt-2 shrink-0 text-center">Tap to close</p>
                       </div>
                       <div className="text-center mt-4">
                         <h4 className="font-bold text-lg">{speaker.name}</h4>
