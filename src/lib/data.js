@@ -8,8 +8,7 @@ export const eventData = {
   heroSubheading: "Equipping believers with the revelation of the wisdom of God’s Word and the impartation of power and grace for marketplace exploits.",
   date: "Saturday, March 28, 2026",
   time: "9:00 AM",
-  venue: "Coming Soon",
-  // venue: "Four Points by Sheraton Hotel",
+  venue: "18B The Rock Drive",
   attendanceMode: "Hybrid Event (Physical & Online)",
   physicalLimit: 70,
   contact: {

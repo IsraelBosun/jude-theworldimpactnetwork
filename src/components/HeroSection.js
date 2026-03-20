@@ -92,7 +92,7 @@ export default function HeroSection() {
                   <div className="w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center text-2xl">📍</div>
                   <div>
                     <p className="font-bold text-xl">{eventData.venue}</p>
-                    <p className="text-sm text-gray-400">Victoria Island, Lagos</p>
+                    <p className="text-sm text-gray-400">Opposite IMAX, Lekki Phase 1, Lagos, Nigeria</p>
                   </div>
                 </div>
 
