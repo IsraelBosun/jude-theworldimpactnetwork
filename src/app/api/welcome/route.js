@@ -1,30 +1,36 @@
-import { Resend } from "resend";
+import nodemailer from "nodemailer";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
 const WHATSAPP_URL = process.env.NEXT_PUBLIC_WHATSAPP_URL || "https://chat.whatsapp.com/placeholder";
-const FROM_EMAIL = process.env.FROM_EMAIL || "onboarding@resend.dev";
-const REPLY_TO = process.env.REPLY_TO;
+
+const transporter = nodemailer.createTransport({
+  service: "gmail",
+  auth: {
+    user: process.env.GMAIL_USER,
+    pass: process.env.GMAIL_APP_PASSWORD,
+  },
+});
 
 export async function POST(request) {
-  const { firstName, lastName, email } = await request.json();
+  const { firstName, full_name, email } = await request.json();
+  const name = firstName || full_name?.split(" ")[0] || "Friend";
 
-  const { error } = await resend.emails.send({
-    from: `TMMF Community <${FROM_EMAIL}>`,
-    to: email,
-    reply_to: REPLY_TO,
-    subject: `Welcome to TMMF, ${firstName}!`,
-    html: emailTemplate({ firstName, lastName }),
-  });
-
-  if (error) {
-    console.error("Resend error:", error);
-    return Response.json({ error: error.message }, { status: 500 });
+  try {
+    await transporter.sendMail({
+      from: `TMMF Community <${process.env.GMAIL_USER}>`,
+      to: email,
+      replyTo: process.env.GMAIL_USER,
+      subject: `Welcome to TMMF, ${name}!`,
+      html: emailTemplate({ firstName: name }),
+    });
+  } catch (err) {
+    console.error("Nodemailer error:", err);
+    return Response.json({ error: err.message }, { status: 500 });
   }
 
   return Response.json({ success: true });
 }
 
-function emailTemplate({ firstName, lastName }) {
+function emailTemplate({ firstName }) {
   return `
 <!DOCTYPE html>
 <html lang="en">

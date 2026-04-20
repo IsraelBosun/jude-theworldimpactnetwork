@@ -41,6 +41,12 @@ export default function JoinSection() {
       }
     }
 
+    fetch("/api/welcome", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ full_name: form.full_name, email: form.email }),
+    }).catch(() => {});
+
     setStatus("success");
   };
 

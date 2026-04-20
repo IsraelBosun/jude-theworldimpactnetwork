@@ -11,7 +11,7 @@ export const eventData = {
     phone2: "+234 906 504 9121",
     email: "thewordimpactnetwork@gmail.com"
   },
-  whatsappUrl: "https://chat.whatsapp.com/placeholder"
+  whatsappUrl: "https://chat.whatsapp.com/JXPlztmVXC2DTaZIwYz8xh?mode=gi_t"
 };
 
 export const navLinks = [

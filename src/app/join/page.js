@@ -41,11 +41,7 @@ export default function JoinPage() {
     referral_source: "",
     referral_other: "",
   });
-  const [status, setStatus] = useState(() =>
-    typeof window !== "undefined" && localStorage.getItem("tmmf_joined") === "true"
-      ? "success"
-      : "idle"
-  );
+  const [status, setStatus] = useState("idle");
   const [errorMsg, setErrorMsg] = useState("");
 
   const handleChange = (e) =>
@@ -89,7 +85,6 @@ export default function JoinPage() {
       console.error("Email error:", err);
     }
 
-    localStorage.setItem("tmmf_joined", "true");
     setStatus("success");
   };
 
