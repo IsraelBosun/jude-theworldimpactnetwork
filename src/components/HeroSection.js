@@ -34,7 +34,7 @@ export default function HeroSection() {
           {/* Massive headline */}
           <h1
             className="font-black tracking-tighter leading-[0.82] uppercase italic text-white mb-10 -ml-1"
-            style={{ fontSize: "clamp(5rem, 17vw, 20rem)" }}
+            style={{ fontSize: "clamp(2.8rem, 13vw, 20rem)" }}
           >
             {eventData.theme.main}
           </h1>

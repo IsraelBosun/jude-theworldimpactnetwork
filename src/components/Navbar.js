@@ -25,7 +25,7 @@ export default function Navbar() {
   };
 
   return (
-    <nav className={`fixed top-0 w-full z-[100] transition-all duration-300 ${scrolled ? "bg-dark/98 shadow-2xl border-b border-white/5" : "bg-transparent"}`}>
+    <nav className={`fixed top-0 w-full z-[100] transition-all duration-300 ${scrolled || pathname === "/join" ? "bg-dark/98 shadow-2xl border-b border-white/5" : "bg-transparent"}`}>
       <div className="container mx-auto px-6 lg:px-16 h-20 flex items-center justify-between">
 
         {/* Logo */}
