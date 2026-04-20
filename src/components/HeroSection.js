@@ -8,10 +8,10 @@ export default function HeroSection() {
       <div className="absolute inset-0">
         <img
           src="/hero.png"
-          className="w-full h-full object-cover opacity-25 scale-105"
+          className="w-full h-full object-cover opacity-40 scale-105"
           alt="TMMF"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-dark/50 via-dark/70 to-dark" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/55 to-black/85" />
       </div>
 
       {/* Decorative grain texture */}
@@ -27,16 +27,18 @@ export default function HeroSection() {
           <div className="flex items-center gap-4 mb-10">
             <div className="h-px w-10 bg-gold" />
             <p className="text-gold font-bold tracking-[0.5em] uppercase text-[10px]">
-              {eventData.name}
+              TMMF · TWIN Global
             </p>
           </div>
 
-          {/* Massive headline */}
+          {/* Headline */}
           <h1
-            className="font-black tracking-tighter leading-[0.82] uppercase italic text-white mb-10 -ml-1"
-            style={{ fontSize: "clamp(2.8rem, 13vw, 20rem)" }}
+            className="font-black tracking-tighter leading-[0.88] uppercase text-white mb-10 -ml-1"
+            style={{ fontSize: "clamp(2.4rem, 7vw, 9rem)" }}
           >
-            {eventData.theme.main}
+            The Marketplace<br />
+            Ministers'<br />
+            Forum
           </h1>
 
           {/* Subtitle row */}

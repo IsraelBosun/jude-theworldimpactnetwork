@@ -17,7 +17,7 @@ export const eventData = {
 export const navLinks = [
   { name: "About", href: "#about" },
   { name: "Who Should Join", href: "#who-should-join" },
-  { name: "Highlights", href: "/gathering" },
+  { name: "LIMITLESS Highlights", href: "/gathering" },
 ];
 
 export const audienceCards = [
