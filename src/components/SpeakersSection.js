@@ -49,13 +49,13 @@ export default function SpeakersSection() {
   };
 
   return (
-    <section id="speakers" className="section-padding bg-white">
+    <section id="leaders" className="section-padding bg-white">
       <div className="container mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
           <div className="max-w-2xl">
-            <h2 className="text-4xl md:text-5xl font-black mb-6">Featured <span className="text-gold">Speakers & Artists</span></h2>
+            <h2 className="text-4xl md:text-5xl font-black mb-6">Community <span className="text-gold">Leaders</span></h2>
             <p className="text-gray-600 text-lg">
-              TMMF will host seasoned industry leaders, marketplace ministers, transformational voices, and anointed artists with proven impact.
+              Seasoned marketplace ministers and industry leaders who guide, inspire, and pour into our community.
             </p>
           </div>
         </div>

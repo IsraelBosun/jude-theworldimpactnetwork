@@ -7,12 +7,12 @@ export default function SponsorshipPage() {
       items: "Publicity, digital campaigns, social media visibility, media coverage"
     },
     {
-      title: "Event Production",
+      title: "Community Events",
       items: "Sound systems, stage setup, lighting, technical services"
     },
     {
       title: "Decoration & Ambience",
-      items: "Stage décor, venue styling, branding elements"
+      items: "Venue styling, stage décor, branding elements"
     },
     {
       title: "Print & Branding",
@@ -32,14 +32,12 @@ export default function SponsorshipPage() {
             Official Partnership Invitation
           </p>
           <h1 className="text-5xl md:text-7xl font-black mb-6 tracking-tighter">
-            SPONSORSHIP & <br />
+            PARTNERSHIP & <br />
             <span className="text-gold italic uppercase">Collaboration</span>
           </h1>
-          <div className="flex flex-col md:flex-row gap-8 text-sm font-bold uppercase tracking-widest text-gray-400">
-            <span>📅 {eventData.date}</span>
-            <span>📍 {eventData.venue}</span>
-            <span>🎥 {eventData.attendanceMode}</span>
-          </div>
+          <p className="text-gray-500 text-lg max-w-2xl leading-relaxed">
+            Partner with TMMF and invest in the next generation of faith-driven marketplace leaders across Nigeria and beyond.
+          </p>
         </header>
 
         <div className="grid lg:grid-cols-12 gap-16">
@@ -50,29 +48,24 @@ export default function SponsorshipPage() {
               <p className="font-bold text-dark text-2xl">Dear Potential Partner,</p>
 
               <p>
-                We are pleased to share that{" "}
-                <span className="text-dark font-bold">{eventData.name}</span>, an
-                initiative of TWIN Global, will be hosting its Inaugural
-                Conference themed{" "}
+                We are pleased to invite you into partnership with{" "}
+                <span className="text-dark font-bold">{eventData.name}</span>, a
+                faith-driven community platform under TWIN Global, themed{" "}
                 <span className="text-gold font-bold italic">
-                  “{eventData.theme.main} — {eventData.theme.sub}”
+                  "{eventData.theme.main} — {eventData.theme.sub}"
                 </span>.
               </p>
 
               <p>
-                TMMF is a faith-based business and career platform committed to
-                raising industry leaders from the Body of Christ across all
-                spheres of influence. This conference is designed to equip
-                corporate professionals, entrepreneurs, creatives, and skilled
-                artisans with practical leadership insight anchored in God’s
-                Word.
+                TMMF is a growing community of marketplace ministers — corporate professionals,
+                entrepreneurs, creatives, and skilled artisans — committed to building sustainable
+                impact anchored in God's Word.
               </p>
 
               <p>
-                To deliver a world-class experience, we are seeking strategic
-                partners and sponsors who share our passion for faith–work
-                integration, leadership development, and societal
-                transformation.
+                To build and sustain this community platform, we are seeking strategic partners
+                and sponsors who share our passion for faith–work integration, leadership
+                development, and societal transformation.
               </p>
             </section>
 
@@ -82,13 +75,13 @@ export default function SponsorshipPage() {
                 The Need
               </h3>
               <p className="text-xl font-medium leading-snug">
-                Support is required to cover venue logistics, guest speakers,
-                media promotion, event production, and operational costs
-                necessary to deliver a premium conference experience.
+                Support is required to cover community operations, media promotion,
+                event production for community gatherings, and resources that deliver
+                a premium experience to our growing membership.
               </p>
             </section>
 
-            {/* Collaboration Areas - Mobile Optimized */}
+            {/* Collaboration Areas */}
             <section className="space-y-8">
               <h2 className="text-3xl font-black tracking-tighter uppercase italic">
                 Ways to <span className="text-gold">Collaborate</span>
@@ -98,9 +91,9 @@ export default function SponsorshipPage() {
                 {collaborationAreas.map((area, i) => (
                   <div
                     key={i}
-                    className="group p-6 rounded-3xl border border-gray-100 bg-gray-50/50 
-                               hover:border-gold/50 hover:bg-white 
-                               active:scale-[0.98] active:border-gold 
+                    className="group p-6 rounded-3xl border border-gray-100 bg-gray-50/50
+                               hover:border-gold/50 hover:bg-white
+                               active:scale-[0.98] active:border-gold
                                transition-all duration-200 cursor-pointer select-none"
                   >
                     <h3 className="font-bold text-dark mb-2 group-hover:text-gold transition-colors">
@@ -123,9 +116,8 @@ export default function SponsorshipPage() {
                     Direct Financial Support
                   </h2>
                   <p className="text-gray-400 text-sm leading-relaxed mb-6">
-                    Partners may also support the TMMF vision through direct
-                    financial contributions. Your generosity advances
-                    faith-driven excellence in the marketplace.
+                    Partners may also support the TMMF vision through direct financial
+                    contributions. Your generosity advances faith-driven excellence in the marketplace.
                   </p>
 
                   <div className="flex items-center gap-4">
@@ -147,7 +139,7 @@ export default function SponsorshipPage() {
                 <div className="text-center md:text-right">
                   <div className="inline-block bg-white/5 backdrop-blur-md p-6 rounded-2xl border border-white/10">
                     <p className="text-[10px] uppercase tracking-widest text-gray-400 mb-1">
-                      Impact Status
+                      Community Vision
                     </p>
                     <p className="text-2xl font-black text-gold uppercase italic tracking-tighter leading-none">
                       Limitless
@@ -165,7 +157,7 @@ export default function SponsorshipPage() {
               </p>
               <p className="text-gray-500 text-sm">Convener, TMMF</p>
               <p className="text-gold text-xs font-bold mt-1 uppercase tracking-tighter italic">
-                “Raising Kingdom Leaders for Marketplace Exploit”
+                "Raising Kingdom Leaders for Marketplace Exploit"
               </p>
             </section>
           </div>
@@ -179,9 +171,9 @@ export default function SponsorshipPage() {
                 </h3>
                 <ul className="space-y-6">
                   {[
-                    "Organization mention as a supporter",
-                    "Recognition in select communications",
-                    "Acknowledgment during the program"
+                    "Organization mention as a community supporter",
+                    "Recognition in TMMF communications",
+                    "Acknowledgment at community gatherings"
                   ].map((benefit, i) => (
                     <li
                       key={i}
@@ -214,7 +206,6 @@ export default function SponsorshipPage() {
                   >
                     {eventData.contact.phone}
                   </a>
-                  {/* Second Phone Number */}
                   <a
                     href={`tel:${eventData.contact.phone2}`}
                     className="block font-black text-sm border-b border-black/20 pb-2"
@@ -222,19 +213,17 @@ export default function SponsorshipPage() {
                     {eventData.contact.phone2}
                   </a>
                 </div>
-                    <a
-                      href="https://tally.so/r/kdE6vJ"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="block"
-                    >
-                      <button className="w-full bg-black cursor-pointer text-white py-4 rounded-xl font-black uppercase tracking-widest text-xs mt-8 active:scale-95 transition-transform">
-                        Partner Now
-                      </button>
-                    </a>
-
+                <a
+                  href="https://tally.so/r/kdE6vJ"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block"
+                >
+                  <button className="w-full bg-black cursor-pointer text-white py-4 rounded-xl font-black uppercase tracking-widest text-xs mt-8 active:scale-95 transition-transform">
+                    Partner Now
+                  </button>
+                </a>
               </div>
-
             </div>
           </aside>
         </div>
@@ -242,4 +231,3 @@ export default function SponsorshipPage() {
     </main>
   );
 }
-

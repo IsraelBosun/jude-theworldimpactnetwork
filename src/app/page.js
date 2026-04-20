@@ -1,25 +1,15 @@
 import HeroSection from "@/components/HeroSection";
 import AboutSection from "@/components/AboutSection";
 import AudienceSection from "@/components/AudienceSection";
-import OutcomesSection from "@/components/OutcomesSection";
-import SpeakersSection from "@/components/SpeakersSection";
-// import ScheduleSection from "@/components/ScheduleSection";
-import RegistrationSection from "@/components/RegistrationSection";
-// import SponsorsStrip from "@/components/SponsorsStrip";
+import CTASection from "@/components/CTASection";
 
 export default function Home() {
   return (
-    <main className="relative">
+    <main>
       <HeroSection />
-      {/* <SponsorsStrip /> */}
-      <div className="relative z-10 bg-white">
-        <AboutSection />
-        <AudienceSection />
-        <OutcomesSection />
-        <SpeakersSection />
-        {/* <ScheduleSection /> */}
-        <RegistrationSection />
-      </div>
+      <AboutSection />
+      <AudienceSection />
+      <CTASection />
     </main>
   );
 }

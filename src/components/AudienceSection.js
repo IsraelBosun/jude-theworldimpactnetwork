@@ -1,81 +1,60 @@
 "use client";
-import { useState } from 'react';
-import { audienceCards } from '@/lib/data';
+import { audienceCards } from "@/lib/data";
 
 export default function AudienceSection() {
-  const [activeCard, setActiveCard] = useState(null);
-
-  const handleCardTouch = (idx) => {
-    // If user taps the same card, close it; otherwise open the new one
-    setActiveCard(activeCard === idx ? null : idx);
-  };
-
   return (
-    <section id="audience" className="section-padding bg-white">
-      <div className="container mx-auto px-6">
-        <div className="text-center max-w-3xl mx-auto mb-20">
-          <h2 className="text-4xl md:text-6xl font-black mb-6 uppercase tracking-tighter">
-            Who Should <span className="text-gold">Attend</span>
-          </h2>
-          <p className="text-gray-500 text-lg font-medium">
-            TMMF is designed for believers called to influence the marketplace through excellence, leadership, and faith.
+    <section id="who-should-join" className="py-32 px-6 bg-dark text-white overflow-hidden">
+      <div className="container mx-auto">
+
+        {/* Header */}
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-20">
+          <div>
+            <div className="flex items-center gap-4 mb-6">
+              <div className="h-px w-8 bg-gold" />
+              <p className="text-[10px] uppercase tracking-[0.5em] font-bold text-gold/70">Membership</p>
+            </div>
+            <h2 className="text-5xl md:text-6xl lg:text-7xl font-black leading-[0.88] tracking-tight uppercase">
+              WHO SHOULD<br />
+              <span className="text-gold italic">JOIN?</span>
+            </h2>
+          </div>
+          <p className="text-gray-400 text-base max-w-xs leading-relaxed md:text-right">
+            TMMF is for every believer navigating the intersection of faith and professional life.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {audienceCards.map((item, idx) => {
-            const isActive = activeCard === idx;
+        {/* Cards grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          {audienceCards.map((card, idx) => (
+            <div
+              key={card.title}
+              className="group relative aspect-[4/5] rounded-2xl overflow-hidden cursor-default"
+            >
+              {/* Image */}
+              <img
+                src={card.image}
+                alt={card.title}
+                className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+              />
 
-            return (
-              <div 
-                key={idx} 
-                onClick={() => handleCardTouch(idx)}
-                className={`group relative h-[500px] overflow-hidden rounded-[2.5rem] bg-dark transition-all duration-500 cursor-pointer shadow-xl
-                  ${isActive ? 'shadow-2xl -translate-y-2 ring-2 ring-gold' : ''}`}
-              >
-                {/* Audience Image */}
-                <img 
-                  src={item.image} 
-                  alt={item.title} 
-                  className={`absolute inset-0 h-full w-full object-cover transition-all duration-700 
-                    ${isActive ? 'scale-110 grayscale-0 opacity-100' : 'grayscale opacity-70 group-hover:scale-110 group-hover:grayscale-0 group-hover:opacity-100'}`}
-                />
+              {/* Gradient overlay */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/50 to-black/10" />
 
-                {/* Gradient Overlay */}
-                <div className={`absolute inset-0 bg-gradient-to-t from-dark via-dark/20 to-transparent transition-opacity duration-500
-                  ${isActive ? 'opacity-100' : 'opacity-90 group-hover:opacity-100'}`}>
-                </div>
-
-                {/* Content */}
-                <div className={`absolute bottom-0 left-0 p-8 w-full transform transition-all duration-500 
-                  ${isActive ? 'translate-y-[-10px]' : 'group-hover:translate-y-[-10px]'}`}>
-                  
-                  <h3 className="text-2xl font-black text-white mb-3 tracking-tight">
-                    {item.title}
-                  </h3>
-                  
-                  {/* Gold Line */}
-                  <div className={`h-1 bg-gold mb-4 transition-all duration-500 
-                    ${isActive ? 'w-full' : 'w-12 group-hover:w-full'}`}>
-                  </div>
-
-                  {/* Description Text */}
-                  <p className={`text-gray-300 text-sm leading-relaxed transition-all duration-500 
-                    ${isActive ? 'opacity-100 h-auto translate-y-0' : 'opacity-0 h-0 translate-y-4 lg:group-hover:opacity-100 lg:group-hover:h-auto lg:group-hover:translate-y-0'}`}>
-                    {item.desc}
-                  </p>
-                </div>
-
-                {/* Mobile Tap Indicator (Optional - subtle hint) */}
-                <div className="absolute top-6 right-6 lg:hidden">
-                    <div className={`w-8 h-8 rounded-full border border-white/20 flex items-center justify-center backdrop-blur-sm transition-transform ${isActive ? 'rotate-45 text-gold' : 'text-white'}`}>
-                        {isActive ? '✕' : '+'}
-                    </div>
-                </div>
+              {/* Large background number */}
+              <div className="absolute top-4 right-4 text-[5rem] font-black text-white/[0.06] leading-none select-none pointer-events-none">
+                {String(idx + 1).padStart(2, '0')}
               </div>
-            );
-          })}
+
+              {/* Content */}
+              <div className="absolute inset-0 flex flex-col justify-end p-7">
+                <div className="h-0.5 w-8 bg-gold mb-5 group-hover:w-16 transition-all duration-500" />
+                <h3 className="text-white font-black text-xl mb-2 leading-tight">{card.title}</h3>
+                <p className="text-gray-400 text-sm leading-relaxed">{card.desc}</p>
+              </div>
+            </div>
+          ))}
         </div>
+
       </div>
     </section>
   );

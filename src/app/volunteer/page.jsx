@@ -21,7 +21,7 @@ export default function VolunteerPage() {
               <span className="text-gold italic">PURPOSE</span>
             </h1>
             <p className="text-black lg:text-black text-lg mb-8 leading-relaxed max-w-lg">
-                The Marketplace Ministers’ Forum is seeking committed individuals who are eager to contribute their skills, time, and passion toward delivering a world-class conference experience.
+                The Marketplace Ministers’ Forum is seeking committed individuals who are eager to contribute their skills, time, and passion toward building and serving our growing community.
             </p>
             
             <div className="space-y-6 text-black mb-12">

@@ -30,8 +30,7 @@
 
 
 import "./globals.css";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
+import MainLayout from "@/components/MainLayout";
 import { eventData } from "@/lib/data";
 
 export const metadata = {
@@ -71,9 +70,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-        <Navbar />
-        {children}
-        <Footer />
+        <MainLayout>
+          {children}
+        </MainLayout>
       </body>
     </html>
   );

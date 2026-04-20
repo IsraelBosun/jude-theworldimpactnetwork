@@ -10,7 +10,7 @@ export default function OutcomesSection() {
             WHAT YOU'LL <br /> <span className="text-gold italic">GAIN</span>
           </h2>
           <p className="mt-8 text-gray-400 text-lg max-w-md">
-            The conference is designed to be a catalyst for your next level of marketplace dominion.
+            The community is designed to be a catalyst for your next level of marketplace dominion.
           </p>
         </div>
 
