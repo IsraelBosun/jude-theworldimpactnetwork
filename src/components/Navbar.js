@@ -24,8 +24,13 @@ export default function Navbar() {
     return href;
   };
 
+  // Pages that open with a light background need the solid nav from the top,
+  // otherwise the white logo and links sit invisibly on a pale panel.
+  const lightTopPages = ["/join", "/webinar", "/partnership"];
+  const solid = scrolled || lightTopPages.includes(pathname);
+
   return (
-    <nav className={`fixed top-0 w-full z-[100] transition-all duration-300 ${scrolled || pathname === "/join" ? "bg-dark/98 shadow-2xl border-b border-white/5" : "bg-transparent"}`}>
+    <nav className={`fixed top-0 w-full z-[100] transition-all duration-300 ${solid ? "bg-dark/98 shadow-2xl border-b border-white/5" : "bg-transparent"}`}>
       <div className="container mx-auto px-6 lg:px-16 h-20 flex items-center justify-between">
 
         {/* Logo */}
@@ -43,7 +48,7 @@ export default function Navbar() {
             <Link
               key={link.name}
               href={getHref(link.href)}
-              className="text-[10px] uppercase tracking-[0.35em] font-bold text-gray-400 hover:text-white transition-colors"
+              className="text-[10px] uppercase tracking-[0.35em] font-bold text-gray-300 hover:text-gold transition-colors"
             >
               {link.name}
             </Link>
