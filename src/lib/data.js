@@ -14,9 +14,22 @@ export const eventData = {
   whatsappUrl: "https://chat.whatsapp.com/JXPlztmVXC2DTaZIwYz8xh?mode=gi_t"
 };
 
+export const webinarData = {
+  title: "Monthly Webinar",
+  theme: "The Marketplace Leadership",
+  venue: "Google Meet",
+  meetUrl: "https://meet.google.com/zzn-mwgk-qak",
+  dateLabel: "Saturday, 22nd August 2026",
+  timeLabel: "11:00 AM",
+  // West Africa Time (UTC+1). Used to build calendar links.
+  startUtc: "2026-08-22T10:00:00Z",
+  endUtc: "2026-08-22T12:00:00Z",
+};
+
 export const navLinks = [
   { name: "About", href: "#about" },
   { name: "Who Should Join", href: "#who-should-join" },
+  { name: "Monthly Webinar", href: "/webinar" },
   { name: "LIMITLESS Highlights", href: "/gathering" },
 ];
 
