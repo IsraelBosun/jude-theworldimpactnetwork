@@ -94,8 +94,15 @@ export default function WebinarPage() {
         <div className="absolute -bottom-20 -right-20 w-80 h-80 bg-gold/5 rounded-full blur-[100px] pointer-events-none" />
 
         <div className="relative z-10">
+          <p className="text-[10px] uppercase tracking-[0.5em] font-bold text-gold mb-5">
+            {webinarData.title}
+          </p>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-black leading-[0.88] tracking-tight uppercase mb-6">
+            MARKETPLACE<br />
+            <span className="text-gold italic">LEADERSHIP</span>
+          </h1>
           <p className="text-gray-400 text-base leading-relaxed mb-10 max-w-sm">
-            One hour, live on Google Meet. A conversation about leading with conviction in the spaces where you already have influence.
+            Live on Google Meet. A conversation about leading with conviction in the spaces where you already have influence.
           </p>
 
           {/* Event detail strip */}
