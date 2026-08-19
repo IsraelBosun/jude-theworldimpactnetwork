@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import { supabase } from "@/lib/supabase";
-import { eventData } from "@/lib/data";
+import { eventData, referralOptions } from "@/lib/data";
 
 const professionOptions = [
   "Corporate Professional (Banking, Law, Engineering, Admin)",
@@ -9,16 +9,6 @@ const professionOptions = [
   "Creative (Design, Content, Media, Fashion)",
   "Skilled Tradesperson / Artisan",
   "Student",
-  "Other",
-];
-
-const referralOptions = [
-  "From a Friend",
-  "The TMMF Inaugural Event (March 2026)",
-  "Instagram",
-  "YouTube",
-  "Facebook",
-  "TikTok",
   "Other",
 ];
 

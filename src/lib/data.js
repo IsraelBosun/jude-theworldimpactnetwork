@@ -26,6 +26,18 @@ export const webinarData = {
   endUtc: "2026-08-22T12:00:00Z",
 };
 
+// Shared by the /join and /webinar forms so the options stay in sync.
+export const referralOptions = [
+  "From a Friend",
+  "WhatsApp Status",
+  "The TMMF Inaugural Event (March 2026)",
+  "Instagram",
+  "YouTube",
+  "Facebook",
+  "TikTok",
+  "Other",
+];
+
 export const navLinks = [
   { name: "About", href: "#about" },
   { name: "Who Should Join", href: "#who-should-join" },
