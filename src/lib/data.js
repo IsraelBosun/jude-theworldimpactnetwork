@@ -15,15 +15,21 @@ export const eventData = {
 };
 
 export const webinarData = {
-  title: "Monthly Webinar",
-  theme: "The Marketplace Leadership",
+  title: "September Webinar",
+  theme: "Marketplace Leadership II",
   venue: "Google Meet",
-  meetUrl: "https://meet.google.com/zzn-mwgk-qak",
-  dateLabel: "Saturday, 22nd August 2026",
+  // Each webinar gets its own registrations table. See supabase/.
+  table: "september_webinar_registrations",
+  meetUrl: "https://meet.google.com/yje-fzyo-idq",
+  dateLabel: "Saturday, 26th September 2026",
   timeLabel: "11:00 AM",
   // West Africa Time (UTC+1). Used to build calendar links.
-  startUtc: "2026-08-22T10:00:00Z",
-  endUtc: "2026-08-22T12:00:00Z",
+  startUtc: "2026-09-26T10:00:00Z",
+  endUtc: "2026-09-26T11:00:00Z",
+  speaker: {
+    name: "Jude Oni",
+    role: "Founder, The Marketplace Ministers' Forum (TMMF)",
+  },
 };
 
 // Shared by the /join and /webinar forms so the options stay in sync.

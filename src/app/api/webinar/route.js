@@ -19,7 +19,7 @@ export async function POST(request) {
       from: `TMMF Community <${process.env.GMAIL_USER}>`,
       to: email,
       replyTo: process.env.GMAIL_USER,
-      subject: `You're registered — TMMF ${webinarData.title}, ${webinarData.dateLabel}`,
+      subject: `You're registered for TMMF ${webinarData.title}, ${webinarData.dateLabel}`,
       html: emailTemplate({ firstName: name }),
       icalEvent: {
         filename: "tmmf-webinar.ics",
@@ -69,7 +69,7 @@ function emailTemplate({ firstName }) {
                 See you there, ${firstName}!
               </h1>
               <p style="margin:0 0 32px;font-size:16px;color:#555;line-height:1.7;">
-                Your spot for the <strong>TMMF ${webinarData.title}</strong> is confirmed. Here are the details &mdash; save this email so you have the link handy.
+                Your spot for the <strong>TMMF ${webinarData.title}</strong> is confirmed. Here are the details. Save this email so you have the link handy.
               </p>
 
               <!-- Event details -->
@@ -92,6 +92,10 @@ function emailTemplate({ firstName }) {
                       <tr>
                         <td style="padding:6px 0;font-size:11px;color:#aaa;text-transform:uppercase;letter-spacing:2px;">Venue</td>
                         <td style="padding:6px 0;font-size:15px;color:#333;">${webinarData.venue}</td>
+                      </tr>
+                      <tr>
+                        <td style="padding:6px 0;font-size:11px;color:#aaa;text-transform:uppercase;letter-spacing:2px;">Speaker</td>
+                        <td style="padding:6px 0;font-size:15px;color:#333;">${webinarData.speaker.name}</td>
                       </tr>
                     </table>
                   </td>
@@ -119,7 +123,7 @@ function emailTemplate({ firstName }) {
               </table>
 
               <p style="margin:0 0 32px;font-size:13px;color:#888;line-height:1.6;text-align:center;">
-                A calendar invite is attached to this email &mdash; open it to add the event to Apple Calendar, Outlook, or any other calendar app.
+                A calendar invite is attached to this email. Open it to add the event to Apple Calendar, Outlook, or any other calendar app.
               </p>
 
               <!-- Scripture -->
@@ -127,7 +131,7 @@ function emailTemplate({ firstName }) {
                 <tr>
                   <td style="border-left:4px solid #D4AF37;padding:12px 20px;background:#fafafa;border-radius:0 8px 8px 0;">
                     <p style="margin:0;font-size:14px;color:#888;font-style:italic;line-height:1.6;">
-                      "For with God nothing shall be impossible." &mdash; Luke 1:37
+                      "For with God nothing shall be impossible." (Luke 1:37)
                     </p>
                   </td>
                 </tr>

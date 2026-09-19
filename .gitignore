@@ -39,3 +39,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# one-off working files (registrant lists hold personal data)
+/_scratch/
+/recipients.json

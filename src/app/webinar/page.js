@@ -47,7 +47,7 @@ export default function WebinarPage() {
     const referral_source = form.referral_source === "Other" ? form.referral_other : form.referral_source;
 
     if (supabase) {
-      const { error } = await supabase.from("webinar_registrations").insert([{
+      const { error } = await supabase.from(webinarData.table).insert([{
         first_name: form.first_name,
         last_name: form.last_name,
         email: form.email,
@@ -99,11 +99,23 @@ export default function WebinarPage() {
           </p>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-black leading-[0.88] tracking-tight uppercase mb-6">
             MARKETPLACE<br />
-            <span className="text-gold italic">LEADERSHIP</span>
+            <span className="text-gold italic">LEADERSHIP II</span>
           </h1>
-          <p className="text-gray-400 text-base leading-relaxed mb-10 max-w-sm">
+          <p className="text-gray-400 text-base leading-relaxed mb-8 max-w-sm">
             Live on Google Meet. A conversation about leading with conviction in the spaces where you already have influence.
           </p>
+
+          {/* Speaker */}
+          <div className="flex items-center gap-4 mb-10">
+            <div className="shrink-0 w-11 h-11 rounded-full bg-gold/15 border border-gold/30 flex items-center justify-center">
+              <span className="text-gold text-xs font-black tracking-tight">JO</span>
+            </div>
+            <div>
+              <p className="text-[9px] uppercase tracking-[0.3em] font-bold text-gray-500 mb-1">Speaker</p>
+              <p className="text-sm font-bold text-white leading-snug">{webinarData.speaker.name}</p>
+              <p className="text-xs text-gray-400 leading-snug">{webinarData.speaker.role}</p>
+            </div>
+          </div>
 
           {/* Event detail strip */}
           <div className="grid grid-cols-2 gap-px bg-white/10 rounded-2xl overflow-hidden mb-10 max-w-sm">
@@ -284,6 +296,7 @@ function SuccessState({ firstName }) {
           <Row label="Date" value={webinarData.dateLabel} />
           <Row label="Time" value={`${webinarData.timeLabel} (WAT)`} />
           <Row label="Venue" value={webinarData.venue} />
+          <Row label="Speaker" value={webinarData.speaker.name} />
         </div>
         <MeetLink />
       </div>
@@ -302,7 +315,7 @@ function SuccessState({ firstName }) {
 }
 
 // The room only matters on the day. Before then the link is something to save,
-// not somewhere to go — so the button says so rather than dropping people into
+// not somewhere to go, so the button says so rather than dropping people into
 // an empty call. Computed after mount so server and client markup agree.
 function MeetLink() {
   const [isLive, setIsLive] = useState(false);

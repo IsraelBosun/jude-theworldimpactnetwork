@@ -82,7 +82,7 @@ create policy "Allow public inserts" on members
 
 ### Environment Variables (`.env.local`)
 ```
-NEXT_PUBLIC_SUPABASE_URL=https://cqmekliunldfbalucmem.supabase.co
+NEXT_PUBLIC_SUPABASE_URL=https://svwfmgusblwfwgirqunm.supabase.co
 NEXT_PUBLIC_SUPABASE_ANON_KEY=your_publishable_key_here
 ```
 

@@ -1,9 +1,9 @@
 import { webinarData } from "./data";
 
-// Calendar links want UTC basic format: 20260822T100000Z
+// Calendar links want UTC basic format: 20260926T100000Z
 const toStamp = (iso) => iso.replace(/[-:]/g, "").replace(/\.\d{3}/, "");
 
-export const calendarTitle = `TMMF ${webinarData.title} — ${webinarData.theme}`;
+export const calendarTitle = `TMMF ${webinarData.title}: ${webinarData.theme}`;
 
 const description = [
   `TMMF ${webinarData.title}`,
