@@ -31,6 +31,7 @@
 
 import "./globals.css";
 import MainLayout from "@/components/MainLayout";
+import { Analytics } from "@vercel/analytics/next";
 import { eventData } from "@/lib/data";
 
 export const metadata = {
@@ -73,6 +74,7 @@ export default function RootLayout({ children }) {
         <MainLayout>
           {children}
         </MainLayout>
+        <Analytics />
       </body>
     </html>
   );
