@@ -62,23 +62,9 @@ The long-term vision (Option B) is a full forum with member profiles, discussion
 
 ## Supabase Setup
 
-### Table: `members`
-```sql
-create table members (
-  id uuid default gen_random_uuid() primary key,
-  full_name text not null,
-  email text not null,
-  phone text not null,
-  profession text not null,
-  reason text,
-  created_at timestamp with time zone default now()
-);
-
-alter table members enable row level security;
-
-create policy "Allow public inserts" on members
-  for insert with check (true);
-```
+### Table: `october_2026`
+Join-form sign-ups. Schema lives in `supabase/october_2026.sql` (run it in the Supabase SQL editor).
+Columns: `first_name`, `last_name`, `email`, `phone`, `profession`, `city`, `referral_source`, `created_at`.
 
 ### Environment Variables (`.env.local`)
 ```
@@ -87,8 +73,8 @@ NEXT_PUBLIC_SUPABASE_ANON_KEY=your_publishable_key_here
 ```
 
 ### Join Flow
-1. User fills form on `/join` (name, email, phone, profession, reason)
-2. On submit → row inserted into `members` table in Supabase
+1. User fills form on `/join` (first/last name, email, phone, profession, city, referral source)
+2. On submit → row inserted into `october_2026` table in Supabase
 3. Success screen shown with WhatsApp group link
 4. `localStorage` key `tmmf_joined` is set to `"true"` so refreshing the page still shows the WhatsApp link
 

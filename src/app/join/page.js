@@ -46,7 +46,7 @@ export default function JoinPage() {
     const referral_source = form.referral_source === "Other" ? form.referral_other : form.referral_source;
 
     if (supabase) {
-      const { error } = await supabase.from("members").insert([{
+      const { error } = await supabase.from("october_2026").insert([{
         first_name: form.first_name,
         last_name: form.last_name,
         email: form.email,
