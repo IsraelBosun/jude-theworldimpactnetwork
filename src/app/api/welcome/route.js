@@ -1,6 +1,7 @@
 import nodemailer from "nodemailer";
+import { eventData } from "@/lib/data";
 
-const WHATSAPP_URL = process.env.NEXT_PUBLIC_WHATSAPP_URL || "https://chat.whatsapp.com/placeholder";
+const WHATSAPP_URL = eventData.whatsappUrl;
 
 const transporter = nodemailer.createTransport({
   service: "gmail",
