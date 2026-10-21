@@ -26,7 +26,7 @@ export default function Navbar() {
 
   // Pages that open with a light background need the solid nav from the top,
   // otherwise the white logo and links sit invisibly on a pale panel.
-  const lightTopPages = ["/join", "/webinar", "/partnership"];
+  const lightTopPages = ["/join", "/webinar", "/partnership", "/devotion"];
   const solid = scrolled || lightTopPages.includes(pathname);
 
   return (

@@ -14,6 +14,11 @@ export const eventData = {
   whatsappUrl: "https://chat.whatsapp.com/DOjbJ897JYO0m31p7uID4k?mode=gi_t"
 };
 
+export const devotionData = {
+  table: "devotion_registrations",
+  whatsappUrl: "https://chat.whatsapp.com/KNL1uPN2K4R4EYobzFzKDz?mode=gi_t",
+};
+
 export const webinarData = {
   title: "September Webinar",
   theme: "Marketplace Leadership II",
